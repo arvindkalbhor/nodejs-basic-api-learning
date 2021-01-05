@@ -36,7 +36,7 @@ app.get("/users/:id", (req, res) => {
   const user = _.find(data.users, function (user) {
     return user.id == req.params.id;
   });
-  res.send(user || {});
+  res.send(user || {error:`${req.params.id} User Id  not found`});
 });
 
 app.post("/create-user", (req, res) => {
