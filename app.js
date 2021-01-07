@@ -45,7 +45,7 @@ app.post("/create-user", (req, res) => {
     name: body.name,
     id: data.users.length + 1,
   });
-  res.send({});
+  res.send({msg:'user added success'});
 });
 
 app.delete("/delete-user/:id", (req, res) => {
